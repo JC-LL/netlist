@@ -1,0 +1,17 @@
+# test
+digraph c {
+  graph [rankdir = LR];
+  aa[shape=cds,xlabel="aa"]
+  bb[shape=cds,xlabel="bb"]
+  f1[shape=cds,xlabel="f1"]
+  f2[shape=cds,xlabel="f2"]
+  a1[shape=record; style=filled;color=cadetblue; label="{{<e>e}| a1 |{<f>f}}"]
+  a2[shape=record; style=filled;color=cadetblue; label="{{<e>e}| a2 |{<f>f}}"]
+  b[shape=record; style=filled;color=cadetblue; label="{{<e1>e1|<e2>e2}| b |{<f>f}}"]
+  aa -> a1:e;
+  aa -> b:e1;
+  bb -> b:e2;
+  a1:f -> a2:e;
+  a2:f -> f1;
+  b:f -> f2;
+}
